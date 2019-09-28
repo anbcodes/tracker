@@ -187,6 +187,10 @@ export default {
         let temp = Object.values(this.data).map((value) => value[v]).flat()
         All[v] = [...new Set(temp)]
       })
+      let Alltemp = [...All["Breakfast"], ...All["Lunch"], ...All["Dinner"]]
+      All["Breakfast"] = Alltemp
+      All["Lunch"] = Alltemp
+      All["Dinner"] = Alltemp
       this.All = All
       console.log("ALL", this.All)
     },
